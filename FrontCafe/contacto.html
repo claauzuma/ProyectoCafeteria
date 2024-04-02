@@ -7,14 +7,74 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Contacto</h1>
-    <div class="navbar">
-        <a href="./index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="menu.html">Menu</a>
-        <a href="servicios.html">Servicios</a>
-        <a class="active" href="#contacto">Contacto</a>
-      </div>
-    
+    <header>
+        <h1>Contacto</h1>
+        <nav>
+            <div class="navbar">
+                <a href="./index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="menu.html">Menu</a>
+                <a href="servicios.html">Servicios</a>
+                <a class="active" href="#contacto">Contacto</a>
+            </div>    
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contacto -->
+        <section>
+            <!-- datos -->
+            <article>
+                <div class="datos-generales">
+                    <div class="">
+                        <h4>Direccion</h4>
+                        <p>Calle falsa 123, Palermo, CABA</p>
+                    </div>
+                    <div class="">
+                        <h4>Telefono</h4>
+                        <p>+54 15-5566-9900</p>
+                    </div>
+                    <div class="">
+                        <h4>E-mail</h4>
+                        <p>azuloro.cafe@contacto.com</p>
+                    </div>
+                </div>
+            </article>
+            <!-- formulario -->
+            <article>
+                <div class="google-maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.608480261965!2d-58.43278382666551!3d-34.588771956704875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb588f4af5d17%3A0x560fe6ff3f099abf!2sPlaza%20Serrano!5e0!3m2!1ses-419!2sar!4v1712098633821!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="formulario">
+                    <form action="" method="">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+                        <br>
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" placeholder="Ingrese su apellido">
+                        <br>
+                        <label for="email">E-mail:</label>
+                        <input type="text" id="email" placeholder="Ingrese su e-mail" required>
+                        <br>
+                        <label for="telefono">Telefono:</label>
+                        <input type="tel" id="telefono" placeholder="Deje su numero de contacto">
+                        <br>
+                        <label for="tipo">Tipo de Mensaje:</label>
+                        <input type="radio" name="tipo" id="">Comentario
+                        <input type="radio" name="tipo" id="">Informacion
+                        <input type="radio" name="tipo" id="">Contacto/Servicios
+                        <input type="radio" name="tipo" id="">Otros
+                        <br>
+                        <label for="comentarios">Mensaje:</label>
+                        <br>
+                        <textarea name="comentarios" id="comentarios" cols="30" rows="10" placeholder="Déjanos tu comentario..." required></textarea>
+                    </form>
+                </div>
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </article>
+        </section>
+    </main>   
 </body>
 </html>
