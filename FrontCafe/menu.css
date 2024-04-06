@@ -1,18 +1,62 @@
 
-.contenedor{
-    margin-left: 25%;
+body {
+    background-image: url('./img/fondocafe.jpg'); /* Ruta de la imagen de fondo */
+    background-repeat: repeat;
+    background-size: cover; /* Hace que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
 }
 
+.centrado nav {
+    background-color: #333; /* Color de fondo del navbar */
+    padding: 10px; /* Espaciado interior */
+   
+  }
+
+
+.circulo {
+    display: inline-block;
+    width: 150px; /* Ancho del círculo */
+    height: 50px; /* Altura del círculo */
+    line-height: 50px; /* Alineación vertical */
+    border-radius: 50%; /* Hace que el elemento tenga forma de círculo */
+    border-color: black;
+    background-color: brown; /* Color de fondo del círculo */
+    text-align: center; /* Centra el texto horizontalmente en el círculo */
+    color: white; /* Color del texto */
+    margin-left: 40%;
+
+  }
+
+.contenedor{
+    margin-left: 25%;
+    border-style: solid;
+    height: 30%;
+    
+}
+
+.contenedor {
+    display: flex; /* Hace que los elementos hijos se muestren en línea */
+}
+
+.centrado {
+    margin-left: 30%;
+    color: white;
+}
 
 div {
-    width: 40%;
-    background-color: burlywood;
+    
+    width: 50%;
+    background-color: #deb887;
     margin-left: 10px;
+    border-style:dotted;
+    padding: 10px; /* Añade un espacio de relleno interno de 10px alrededor del contenido */
+    margin: 10px; /* Añade un espacio de margen externo de 10px alrededor del div */
+    
 }
 
 div img {
-    width: 50%; /* Ajusta el ancho de las imágenes al 100% del ancho del contenedor */
-    height: auto; /* Ajusta automáticamente la altura para mantener la relación de aspecto */
+    width: 80%; /* Ajusta el ancho de las imágenes al 100% del ancho del contenedor */
+    height: autopx; /* Ajusta automáticamente la altura para mantener la relación de aspecto */
     border-radius: 15px; /* Agrega bordes redondeados a las imágenes */
     margin-bottom: 10px; /* Agrega un margen inferior a las imágenes para separarlas */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave a las imágenes */
@@ -23,16 +67,12 @@ div img {
     font-family: Arial, sans-serif;
 }
 
-div {
-  
-        border: 2px solid #000; /* Añade un borde sólido de 2px de grosor y color negro */
-        padding: 10px; /* Añade un espacio de relleno interno de 10px alrededor del contenido */
-        margin: 10px; /* Añade un espacio de margen externo de 10px alrededor del div */
-}
+
 
   .navbar {
     overflow: hidden;
     background-color: #333;
+    
 }
 
 .navbar a {
