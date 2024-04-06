@@ -1,0 +1,55 @@
+
+.contenedor{
+    margin-left: 25%;
+}
+
+
+div {
+    width: 40%;
+    background-color: burlywood;
+    margin-left: 10px;
+}
+
+div img {
+    width: 50%; /* Ajusta el ancho de las imágenes al 100% del ancho del contenedor */
+    height: auto; /* Ajusta automáticamente la altura para mantener la relación de aspecto */
+    border-radius: 15px; /* Agrega bordes redondeados a las imágenes */
+    margin-bottom: 10px; /* Agrega un margen inferior a las imágenes para separarlas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave a las imágenes */
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+div {
+  
+        border: 2px solid #000; /* Añade un borde sólido de 2px de grosor y color negro */
+        padding: 10px; /* Añade un espacio de relleno interno de 10px alrededor del contenido */
+        margin: 10px; /* Añade un espacio de margen externo de 10px alrededor del div */
+}
+
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
