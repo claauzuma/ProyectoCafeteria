@@ -1,0 +1,50 @@
+/* Estilos para la sección de nuestros servicios */
+.nuestros-servicios {
+    background-color: #E1C78F; /* Color de fondo */
+    padding: 50px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto al centro */
+}
+
+/* Estilos para el título de la sección */
+.nuestros-servicios h2 {
+    color: #113946; /* Color del título */
+    font-size: 36px; /* Tamaño del título */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos para la lista de servicios */
+.nuestros-servicios ul {
+    list-style: none; /* Quita los estilos de lista */
+    padding: 0; /* Elimina el espacio interno de la lista */
+}
+
+/* Estilos para cada servicio */
+.nuestros-servicios li {
+    background-color: #FAE7C9; /* Color de fondo del servicio */
+    border-radius: 10px; /* Borde redondeado */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espaciado inferior */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para el icono de cada servicio */
+.nuestros-servicios li i {
+    font-size: 36px; /* Tamaño del ícono */
+    color: #706233; /* Color del ícono */
+    margin-bottom: 10px; /* Espaciado inferior */
+    display: block; /* Hace que el ícono esté en su propia línea */
+}
+
+/* Estilos para el nombre de cada servicio */
+.nuestros-servicios li {
+    color: #706233; /* Color del texto */
+    font-size: 24px; /* Tamaño del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilos para la descripción de cada servicio */
+.nuestros-servicios li {
+    color: #706233; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    line-height: 1.5; /* Altura de línea */
+}
