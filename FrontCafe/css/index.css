@@ -1,0 +1,224 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FAE7C9;
+    color: #706233;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #B0926A;
+    color: #FFF2D8;
+    padding: 60px;
+    text-align: center;
+}
+main {
+    padding: 20px;
+}
+    /* Diseño para el pie de pagina */
+footer {
+    background-color: #E1C78F;
+    padding: 50px 20px;
+    color: #113946;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+footer .Contacto,
+footer .Redes,
+footer .Horarios,
+footer .Medios-pago {
+    flex: 1; 
+    margin-bottom: 20px;
+    max-width: 250px; 
+}
+footer h4 {
+    color: #706233;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+footer p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+footer ul li {
+    margin-bottom: 5px;
+}
+footer .redes-sociales a {
+    color: #113946;
+    font-size: 24px;
+    margin: 0 5px;
+}
+    /* Diseño para el boton de subir */
+footer .boton-top {
+    /* display: inline-block; */
+    background-color: #B0926A; 
+    color: #FFF2D8; 
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+footer .boton-top:hover {
+    background-color: #706233;
+}
+    /* Diseño para la barra de navegación */
+nav {
+    background-color: #B0926A;
+    padding: 10px 0;
+    text-align: center;
+}
+nav a {
+    color: #FFF2D8; 
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 16px;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+nav a:hover {
+    background-color: #E1C78F; 
+}
+nav a.active {
+    background-color: #E1C78F;
+    color: #113946; 
+}
+
+
+/* Estilos para la oferta principal */
+.oferta {
+    /* background-image: url("../img/fondocafe.jpg");
+    background-size: cover;
+    background-position: center; */
+    background-color: #FFF2D8;
+    border-radius: 10px;
+    padding: 50px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.oferta h2 {
+    color: #113946;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.oferta h4 {
+    color: #706233;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.oferta p{
+    color: #706233;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+    /* Diseño para el formulario */
+.oferta form {
+    margin-top: 30px;
+    text-align: center;
+}
+.oferta input[type="email"] {
+    width: calc(50% - 10px);
+    padding: 10px; 
+    margin-bottom: 10px;
+    border: 1px solid #B0926A;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.oferta button[type="submit"] {
+    display: inline-block; 
+    background-color: #B0926A;
+    color: #FFF2D8;
+    border: none; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+.oferta button[type="submit"]:hover {
+    background-color: #E1C78F; 
+}
+
+
+/* Estilos para la reserva */
+.reservar {
+    background-color: #FFF2D8; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.reservar h1 {
+    color: #113946; 
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.reservar p {
+    color: #706233;
+    margin-bottom: 20px;
+}
+    /* Diseño para el formulario */
+.reservar label {
+    color: #706233;
+    font-weight: bold;
+}
+.reservar input[type="text"],
+.reservar input[type="email"],
+.reservar input[type="tel"],
+.reservar input[type="date"],
+.reservar input[type="time"],
+.reservar textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #B0926A; 
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.reservar button {
+    background-color: #B0926A; 
+    color: #FFF2D8; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.reservar button:hover {
+    background-color: #E1C78F; 
+}
+
+
+/* Estilos para los testimonios */
+.testimonios {
+    padding: 50px 20px; 
+    text-align: center;
+}
+.testimonios h4 {
+    color: #113946; 
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.testimonios h2 {
+    color: #706233;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.testimonios p {
+    color: #706233; 
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.testimonios img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    margin-bottom: 20px; 
+}
