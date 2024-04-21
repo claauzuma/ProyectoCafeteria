@@ -1,0 +1,98 @@
+:root {
+    --color-primary: #fff2d8;
+    --color-second: #ead7bb;
+    --color-nav: #f7f1e3;
+}
+
+body{
+    background-color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: var(--color-second);
+    padding-right: 20px;
+}
+
+.empleados> section>img {
+    width: 250px;
+    height: 200px;
+    padding-left:50px;
+    background-color:var(--color-second);
+    
+}
+
+section {
+    width: 300px;
+    background-color:var(--color-second);
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+section.hover {
+    back
+}
+
+.empleados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    padding:10px 20px 10px 20px;
+    background-color: var(--color-second);
+    
+}
+
+li {
+    background-color: var(--color-second);
+}
+
+nav {
+    display: flex;
+    background-color: var(--color-nav);
+    height: 20px;
+    justify-content: flex-end;
+    padding: 20px 0px 20px 20px;
+    align-items: center;
+}
+
+a{
+    padding:30px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+nav> a:hover {
+    background-color: var(--color-second);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 0px 0px;
+    background: var(--color-nav);
+    padding: 10px;
+
+}
+
+header>div>img {
+    width: 70px;
+    height:60px;
+    background: var(--color-nav) ;
+    margin: 0px 10px 0px 10px;
+    filter: drop-shadow(10px 10px 10px green)
+}
+
+header>div {
+    display: flex;
+    
+}
