@@ -1,62 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <title>Cafetería Azul y Oro </title>
-</head>
-<body>
-    <header>
-        <title>Cafetería</title>     
+    <title>Cafetería Azul y Oro</title>
+    
+    <!-- Hoja de Estilos -->
+    <link rel="stylesheet" href="css/index.css">
 
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Comienzo del header -->
+    <header>
         <h1>Cafeteria Azul y Oro</h1>
 
         <nav>
-            <div class="navbar">
-                <a class="active" href="#home">Inicio</a>
-                <a href="./nosotros.html">Nosotros</a>
-                <a href="./menu.html">Menu</a>
-                <a href="./servicios.html">Servicios</a>
-                <a href="./contacto.html">Contacto</a>
-            </div>    
+            <a class="active" href="#home">Inicio</a>
+            <a href="./nosotros.html">Nosotros</a>
+            <a href="./menu.html">Menu</a>
+            <a href="./servicios.html">Servicios</a>
+            <a href="./contacto.html">Contacto</a>   
         </nav>
     </header>
+    <!-- Fin del header -->
     
+    <!-- Comienzo del main -->
     <main>
-    <div style="padding:16px">
-      <h2>Contenido Principal</h2>
-      <p>Este es un contenido principal. El NavBar está arriba.</p>
-    </div>
-    
-    <!-- Testimonios -->
-    <section>
-        <div class="">
-            <h4>Testimonios</h4>
-            <h1>Nuestros clientes dicen...</h1>
+        <!-- Oferta del inicio -->
+        <section class="oferta">
+            <div style="padding:16px">
+                <h2>50% OFF</h2>
+                <h2>Especial oferta de Otoño</h2>
+                <h4>Unicamente exclusivo para los dias jueves desde el 1 al 31 de Mayo del 2024</h4>
+                <form action="">
+                    <p>Ingrese su mail para obtener el descuento:</p>
+                    <input type="email" name="oferta" placeholder="Tu mail">    
+                    <button type="submit">Enviar</button>
+                </form> 
+            </div>
+        </section>
+        <!-- Fin de la oferta -->
+        
+        <!-- Reservacion -->
+        <section class="reservar">
+            <h1>Reservar una Mesa</h1>
+            <p>Por favor, completa el siguiente formulario para realizar tu reserva:</p>
+            <form action="procesar_reserva.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+
+                <label for="personas">Cantidad de Personas:</label>
+                <input type="number" id="personas" name="personas" min="1" required>
+
+                <label for="mensaje">Mensaje Adicional:</label>
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+                <button type="submit">Enviar Reserva</button>
+            </form>
+        </section>
+        <!-- Fin reservacion -->
+
+        <!-- Testimonios -->
+        <section>
             <div class="testimonios">
+                <h4>Testimonios</h4>
+                <h2>Nuestros clientes dicen</h2>
+            </div>
+            <div>
+                <img src="img/testimonial-4.jpg" alt="">
+                <h4>Ricardo Montana</h4>
+                <p>"Esta cafetería se ha convertido en mi refugio favorito en la ciudad. Desde el primer sorbo de su café artesanal, supe que había encontrado un lugar especial. El barista fue muy conocedor y me recomendó un café de especialidad que realmente superó mis expectativas. Además, el ambiente relajado y la música suave crearon la atmósfera perfecta para una tarde de lectura. Sin duda, esta cafetería se ha ganado un lugar en mi rutina diaria."</p>
+            </div>
+            <div>
+                <img src="img/testimonial-3.jpg" alt="">
+                <h4>Paula Ramirez</h4>
+                <p>"¡Qué delicia haber descubierto esta cafetería! El aroma a café recién molido me envolvió en cuanto entré. El personal fue increíblemente amable y atento, y la calidad de su café es insuperable. Disfruté de un capuchino mientras trabajaba en mi computadora portátil, y el ambiente tranquilo y acogedor realmente hizo mi día más productivo. ¡Definitivamente volveré pronto!"</p>
+            </div>
+            <div>
+                <img src="img/testimonial-2.jpg" alt="">
+                <h4>Pepe Argento</h4>
+                <p>"¡Una experiencia excepcional de principio a fin! Esta cafetería no solo sirve café de alta calidad, sino que también ofrece un servicio impecable. El personal era amable y eficiente, y mi pedido llegó rápido y exactamente como lo pedí. Además, el diseño interior elegante y moderno creó un ambiente relajado y sofisticado. Disfruté de un espresso mientras trabajaba en mi proyecto y, gracias a la conexión WiFi gratuita, pude avanzar mucho. Definitivamente, esta cafetería se ha convertido en mi lugar de trabajo remoto favorito."</p>
+            </div>
+            <div>
+                <img src="img/testimonial-1.jpg" alt="">
+                <h4>Maria Hoz</h4>
+                <p>"¡Qué lugar más encantador! Desde el momento en que entré, me sentí bienvenida por el cálido saludo del personal. Pedí un pastel casero y un café con leche, y ambos estaban deliciosos. Lo que más me impresionó fue el ambiente hogareño y acogedor; me sentí como si estuviera en la cocina de un amigo. Pasé horas charlando con amigos y disfrutando de la buena compañía. ¡Sin duda, regresaré pronto para probar más de sus deliciosos pasteles!"</p>
+            </div>  
+        </section>
+        <!-- Fin testimonios -->
+    </main> 
+     <!--Fin del main  -->
+    
+    <!-- Comienzo del pie de pagina -->
+    <footer>
+        <!-- Contacto -->
+        <div class="Contacto">
+            <h4>Mantenete en contacto</h4>
+            <p><i class="fa fa-map-marker-alt mr-2"></i>Calle falsa 123, Palermo, CABA</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>15-5555-6789</p>
+            <p><i class="fa fa-envelope mr-2"></i>cafeteria@email.com</p>
         </div>
-        <div>
-            <img src="img/testimonial-4.jpg" alt="">
-            <h4>Ricardo Montan</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam impedit cum culpa quibusdam maiores odit ullam, eligendi nihil placeat repellat dolor aperiam? Veritatis cum similique deleniti corporis temporibus, sit magni?</p>
+        <!-- Redes Sociales -->
+        <div class="Redes">
+            <h4>Seguinos en nuestras redes</h4>
+            <div class="redes-sociales">
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
-        <div>
-            <img src="img/testimonial-3.jpg" alt="">
-            <h4>Paula Ramirez</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam impedit cum culpa quibusdam maiores odit ullam, eligendi nihil placeat repellat dolor aperiam? Veritatis cum similique deleniti corporis temporibus, sit magni?</p>
+        <!-- Horarios -->
+        <div class="Horarios">
+            <h4>Horarios de apertura</h4>
+            <ul>
+                <li><strong>Lunes a Viernes:</strong> 7:00 am - 7:00 pm</li>
+                <li><strong>Sábados:</strong> 8:00 am - 8:00 pm</li>
+                <li><strong>Domingos:</strong> Cerrado</li>
+            </ul>            
         </div>
-        <div>
-            <img src="img/testimonial-2.jpg" alt="">
-            <h4>Pepe Argento</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam impedit cum culpa quibusdam maiores odit ullam, eligendi nihil placeat repellat dolor aperiam? Veritatis cum similique deleniti corporis temporibus, sit magni?</p>
+        <!-- Medios de pago -->
+        <div class="Medios-pago">
+            <h4>Medios de Pago</h4>
+            <ul>
+                <li><i class="fab fa-cc-visa"></i> Visa</li>
+                <li><i class="fab fa-cc-mastercard"></i> Mastercard</li>
+                <li><i class="fab fa-cc-amex"></i> American Express</li>
+                <li><i class="fab fa-cc-paypal"></i> Mercado Pago</li>
+                <li><i class="fas fa-money-bill-wave"></i> Efectivo</li>
+            </ul>
         </div>
-        <div>
-            <img src="img/testimonial-1.jpg" alt="">
-            <h4>Maria Hoz</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam impedit cum culpa quibusdam maiores odit ullam, eligendi nihil placeat repellat dolor aperiam? Veritatis cum similique deleniti corporis temporibus, sit magni?</p>
-        </div>  
-    </section>
-    </main>   
+        <!-- Volver al inicio -->
+        <a href="#top" class="boton-top"><i class="fas fa-arrow-up"></i></a>
+    </footer>
+    <!-- Fin del pie de pagina -->
 </body>
 </html>
