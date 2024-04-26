@@ -1,7 +1,8 @@
 :root {
-    --color-primary: #fff2d8;
-    --color-second: #ead7bb;
+    --color-primary: #FAE7C9;
+    --color-second: #FFF2D8;
     --color-nav: #f7f1e3;
+    --color-letters: #706233:
 }
 
 body{
@@ -11,35 +12,91 @@ body{
     text-align: center;
 }
 
-ul {
+div > h3 {
+    font-size: 45px;
+}
+
+div  > h1 {
+    font-size: 30px;
+}
+.dropdown {
     list-style: none;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
-    background-color: var(--color-second);
-    padding-right: 20px;
+    display: flex;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+
+.dropdown_sub {
+    overflow: hidden;   
+    padding: 0%;
+}
+
+.dropdown_li {
+     list-style: none;
+     align-content: center;
+     justify-content: center;
+     margin-left: auto;
+}
+
+
+
+.dropdown_check {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dropdown_list:has(:checked){
+    --rows: 1fr;
+}
+.dropdown_list {
+    position: relative
+}
+.dropdown_icon {
+    width: 25px;
+    height: 25px;
+}
+
+.dropdown_content {
+    display: grid;
+    grid-template-rows: var(--rows, 0fr);
+    transition: .3s grid-template-rows;
+}
+
+
+.dropdown_info {
+    display: inline-block;
+    padding: 0px 20px 0px 20px;
 }
 
 .empleados> section>img {
     width: 250px;
     height: 200px;
-    padding-left:50px;
-    background-color:var(--color-second);
+    background-color:var(--color-primary);
+    margin: 10px;
+    border-radius: 5px;
     
 }
 
-section {
+.information {
     width: 300px;
-    background-color:var(--color-second);
+    background-color:var(--color-primary);
     text-align: center;
     flex-wrap: wrap;
+    border-radius: 20px;
+    margin: 20px;
+    align-content: center;
+
 }
 
-section.hover {
-    back
-}
+
 
 .empleados {
     display: flex;
@@ -48,21 +105,10 @@ section.hover {
     text-align: center;
     padding:10px 20px 10px 20px;
     background-color: var(--color-second);
-    
+    align-content: space-around;
+    justify-content: space-around;
 }
 
-li {
-    background-color: var(--color-second);
-}
-
-nav {
-    display: flex;
-    background-color: var(--color-nav);
-    height: 20px;
-    justify-content: flex-end;
-    padding: 20px 0px 20px 20px;
-    align-items: center;
-}
 
 a{
     padding:30px;
@@ -71,9 +117,6 @@ a{
     
 }
 
-nav> a:hover {
-    background-color: var(--color-second);
-}
 
 header{
     display: flex;
@@ -84,15 +127,34 @@ header{
 
 }
 
-header>div>img {
-    width: 70px;
-    height:60px;
-    background: var(--color-nav) ;
-    margin: 0px 10px 0px 10px;
-    filter: drop-shadow(10px 10px 10px green)
-}
 
 header>div {
+    display: flex;    
+}
+
+.nuestra-historia {
     display: flex;
-    
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10%;
+    padding: 20px;
+    margin: 0px 10px 0px 10px;
+    background-color: var(--color-primary);
+}
+
+.nuestra-historia > p {
+    flex-wrap: wrap;
+}
+.container {
+    background-color: var(--color-second);
+}
+
+.nuestra-vision {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10%;
+    padding: 20px;
+    margin: 30px 10px 0px 10px;
+    background-color: var(--color-primary);
 }
