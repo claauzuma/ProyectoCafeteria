@@ -1,0 +1,45 @@
+:root {
+    --color-primary: #fff2d8;
+    --color-second: #ead7bb;
+    --color-nav: #f7f1e3;
+}
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: var(--color-second);
+    padding-right: 20px;
+}
+
+.empleados section img {
+    width: 250px;
+    height: 200px;
+    padding-left: 50px;
+}
+
+section {
+    width: 300px;
+    background-color: var(--color-second);
+    text-align: center;
+}
+
+.empleados {
+    padding: 10px 20px;
+    background-color: var(--color-second);
+}
+
+a {
+    padding: 30px;
+    text-decoration: none;
+    color: black;
+}
