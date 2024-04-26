@@ -8,7 +8,7 @@ Para el proyecto se utilizaron las herramientas adquiridas hasta el momento de H
 ## **Integrantes del Equipo**
 
 - Alcaraz, Maria Sol.
-- , Mel.
+- Salerno Flores, Melany.
 - Zumárraga, Claudio.
 
 ## Visualizacion de la Pagina Web
