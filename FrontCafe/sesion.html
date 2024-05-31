@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Iniciar Seeion</title>
+    <link rel="stylesheet" href="css/sesion.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <a href="inicio.html"> <-  volver</a>
+    <div id="formularioRegistro">
+        <h1>Iniciar sesión</h1>
+        <br>
+        <span>
+            <label for="mail">Ingrese su correo electrónico:</label>
+            <br>
+            <input type="email" name="mail" id="registrarEmail"> 
+            <div class="error-text" id="email-error"></div> 
+        </span>
+        <span>
+            <label for="password">Ingrese su contraseña:</label>
+            <br>
+            <input type="password" name="password" id="registrarContraseña">
+            <div class="error-text" id="password-error"></div> 
+        </span>
+        <br>
+        <input type="button" id="enviarBtn" value="Enviar">
+        <input type="button" id="registrarseBtn" value="Registrarse">
+    </div>
+    <script src='js/main.js'></script>
+</body>
+</html>
