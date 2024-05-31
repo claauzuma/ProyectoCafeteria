@@ -1,0 +1,75 @@
+:root {
+    --color-primary: #FAE7C9;
+    --color-second: #FFF2D8;
+    --color-nav: #f7f1e3;
+    --color-letters: #392f0d;
+}
+
+body {
+    background-color: var(--color-second);
+    display: flex;
+    justify-content: center;
+
+    align-content: center;
+    
+}
+
+#formularioRegistro {
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    width: 500px;
+    margin-top: 10vh;
+}
+    
+.error-text {
+    color: red; 
+}
+
+span {
+    width: 270px;
+    text-align: center;
+    font-size: 22px;
+    color: var(--color-letters);
+        
+
+}
+
+#enviarBtn{
+    display: inline-block;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: var(--color-second);
+    padding: 15px 32px;
+    margin: 4px 2px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+label {
+    text-align: center;
+
+}
+#registrarseBtn {
+    background-color: transparent;
+    border-color: transparent;
+    color:var(--color-letters);
+    cursor: pointer;
+}
+
+a{
+    display: static;
+    text-decoration: none;
+    cursor: pointer;
+    color:var(--color-letters);
+}
+
+#registrarEmail, #registrarContraseña{
+    width: 300px;
+    border-color: var(--color-letters);
+    border-style: dashed;
+}
