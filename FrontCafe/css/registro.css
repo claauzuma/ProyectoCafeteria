@@ -1,0 +1,102 @@
+:root {
+    --color-primary: #FAE7C9;
+    --color-second: #FFF2D8;
+    --color-nav: #f7f1e3;
+    --color-letters: #392f0d;
+}
+
+body {
+    background-color: var(--color-second);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#formularioRegistro {
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--color-letters);
+}
+
+label {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    color: var(--color-letters);
+}
+
+input[type="email"],
+input[type="password"],
+input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--color-letters);
+    border-radius: 5px;
+}
+
+input[type="button"] {
+    cursor: pointer;
+    background-color: var(--color-second);
+    border: none;
+    font-size: 20px;
+}
+
+.error-text {
+    color: red;
+    font-size: 0.9em;
+}
+
+span {
+    width: 270px;
+    text-align: center;
+    font-size: 22px;
+    color: var(--color-letters);
+}
+
+#enviarBtn {
+    display: inline-block;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: var(--color-second);
+    padding: 15px 32px;
+    margin: 4px 2px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#registrarseBtn {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-letters);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-letters);
+}
+
+#registrarEmail,
+#registrarContraseña,
+#confirmarContraseña {
+    width: 300px;
+    border-color: var(--color-letters);
+    border-style: dashed;
+}

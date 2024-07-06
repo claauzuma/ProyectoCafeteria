@@ -3,16 +3,16 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Iniciar Seeion</title>
-    <link rel="stylesheet" href="css/sesion.css">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/registro.css">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../FrontCafe/css/registro.css'>
 </head>
 <body>
-    <a href="/index.html"> <-  volver</a>
+    <a href="/index.html"> <- volver</a>
 
     <div id="formularioRegistro">
-        <h1>Iniciar sesión</h1>
+        <h1>Registro</h1>
         <br>
         <span>
             <label for="mail">Ingrese su correo electrónico:</label>
@@ -26,10 +26,15 @@
             <input type="password" name="password" id="registrarContraseña">
             <div class="error-text" id="password-error"></div> 
         </span>
+        <span>
+            <label for="confirmPassword">Confirme su contraseña:</label>
+            <br>
+            <input type="password" name="confirmPassword" id="confirmarContraseña">
+            <div class="error-text" id="confirm-password-error"></div> 
+        </span>
         <br>
-        <input type="button" id="enviarBtn" value="Enviar">
         <input type="button" id="registrarseBtn" value="Registrarse">
     </div>
-    <script src='js/main.js'></script>
+    <script src='js/registro.js'></script>
 </body>
 </html>
