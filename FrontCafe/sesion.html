@@ -16,20 +16,20 @@
         <br>
         <form action="http://localhost:8080/proyecto.Java_01/login" method="POST">
             <span>
-                <label for="mail">Ingrese su correo electrónico:</label>
+                <label for="email">Ingrese su correo electrónico:</label>
                 <br>
-                <input type="email" name="mail" id="registrarEmail" required>
+                <input type="email" name="email" id="email" required>
                 <div class="error-text" id="email-error"></div>
             </span>
             <span>
                 <label for="password">Ingrese su contraseña:</label>
                 <br>
-                <input type="password" name="password" id="registrarContraseña" required>
+                <input type="password" name="password" id="password" required>
                 <div class="error-text" id="password-error"></div>
             </span>
             <br>
             <input type="submit" id="enviarBtn" value="Enviar">
-            <input type="button" id="registrarseBtn" value="Registrarse" onclick="window.location.href='/registro.html'">
+      
         </form>
     </div>
     <script src='js/main.js'></script>
