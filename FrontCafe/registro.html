@@ -14,27 +14,65 @@
     <div id="formularioRegistro">
         <h1>Registro</h1>
         <br>
-        <span>
-            <label for="mail">Ingrese su correo electrónico:</label>
+        <form action="http://localhost:8080/proyecto.Java_01/registro" method="POST">
+            <span>
+                <label for="registrarEmail">Ingrese su nombre:</label>
+                <br>
+                <input type="text" name="nombre" id="registrarNombre" required>
+                <div class="error-text" id="nombre-error"></div>
+            </span>
+            <span>
+                <label for="registrarEmail">Ingrese su apellido:</label>
+                <br>
+                <input type="text" name="apellido" id="registrarApellido" required>
+                <div class="error-text" id="apellido-error"></div>
+            </span>
+            <span>
+                <label for="registrarEmail">Ingrese su correo electrónico:</label>
+                <br>
+                <input type="email" name="email" id="registrarEmail" required>
+                <div class="error-text" id="email-error"></div>
+            </span>
+            <span>
+                <label for="registrarContraseña">Ingrese su contraseña:</label>
+                <br>
+                <input type="password" name="password" id="registrarContraseña" required>
+                <div class="error-text" id="password-error"></div>
+            </span>
+            <span>
+                <label for="registrarEmail">Ingrese su fecha de nacimiento:</label>
+                <br>
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento" required>
+                <div class="error-text" id="fecha-error"></div>
+            </span>
+
             <br>
-            <input type="email" name="mail" id="registrarEmail"> 
-            <div class="error-text" id="email-error"></div> 
-        </span>
-        <span>
-            <label for="password">Ingrese su contraseña:</label>
-            <br>
-            <input type="password" name="password" id="registrarContraseña">
-            <div class="error-text" id="password-error"></div> 
-        </span>
-        <span>
-            <label for="confirmPassword">Confirme su contraseña:</label>
-            <br>
-            <input type="password" name="confirmPassword" id="confirmarContraseña">
-            <div class="error-text" id="confirm-password-error"></div> 
-        </span>
-        <br>
-        <input type="button" id="registrarseBtn" value="Registrarse">
+            <input type="submit" id="registrarseBtn" value="Registrarse">
+        </form>
     </div>
-    <script src='js/registro.js'></script>
+    <script src='js/registro.js'>
+
+
+
+   AOS.init();
+
+     window.onload = function () {
+     var urlParams = new URLSearchParams(window.location.search);
+     console.log(urlParams)
+     if (urlParams.get('exito') === 'true') {
+        document.getElementById('mensajeExito').style.display = 'block';
+          } else if (urlParams.get('error') === 'true') {
+                  document.getElementById('mensajeError').style.display = 'block';
+            }
+     };
+
+
+
+     
+    </script>
+
+
+
+    
 </body>
 </html>

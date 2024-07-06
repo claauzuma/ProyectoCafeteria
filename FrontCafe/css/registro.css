@@ -40,6 +40,8 @@ label {
 }
 
 input[type="email"],
+input[type="text"],
+input[type="date"],
 input[type="password"],
 input[type="button"] {
     width: 100%;
