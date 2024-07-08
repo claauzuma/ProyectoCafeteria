@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,25 +15,58 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Comienzo header -->
     <header>
-        <h1 style="margin-top: -40px;">Nosotros</h1>
+        <h1 style="margin-top: -40px;">Gestion de reservas</h1>
         <nav>
-            <a href="./index.html">Inicio</a>
-            <a class="active" href="#nosotros">Nosotros</a>
-            <a href="./menu.html">Menu</a>
-            <a href="./servicios.html">Servicios</a>
-            <a href="./contacto.html">Contacto</a>
-            <a id="cerrar-sesion" href="./logout.html" style="display: none;">Cerrar sesión</a>
+            <a href="./inicioAdmin.html">Inicio</a>
+            <a href="./gestionUsuariosAdmin.html">Usuarios</a>
+            <a class="active" href="./gestionReservasAdmin.html">Reservas</a>
+            <a href="./gestionPedidosAdmin.html">Pedidos</a>
+            <a id="cerrar-sesion" href="./logout.html" style="display: inline;">Cerrar sesión</a>
         </nav>
     </header>
 
     <h1 id="bienvenida">¡Hola!</h1>
 
-
+    <div class="container mt-5">
+        <h2>Usuarios</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Tipo Usuario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí puedes añadir dinámicamente las filas con JavaScript -->
+                <tr>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>juan.perez@example.com</td>
+                    <td>********</td>
+                    <td>1990-01-01</td>
+                    <td>Admin</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm">Modificar</button>
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </td>
+                </tr>
+                <!-- Añadir más filas según sea necesario -->
+            </tbody>
+        </table>
+    </div>
 
     <!-- Comienzo del pie de pagina -->
     <footer>
@@ -80,32 +112,13 @@
     <!-- Fin del pie de pagina -->
 
     <script>
-        // Definir la variable booleana logeado
-        let logeado = true;
-
         // Obtener el nombre de usuario de la query string
         const params = new URLSearchParams(window.location.search);
         const nombre = params.get('nombre');
 
-        // Mostrar el nombre en la página si está logeado
-        if (logeado && nombre) {
+        // Mostrar el nombre en la página
+        if (nombre) {
             document.getElementById('bienvenida').textContent = 'Bienvenido, ' + nombre;
-        }
-
-        // Añadir el parámetro 'source=logeado' a todos los enlaces del nav si está logeado
-        if (logeado) {
-    
-            const navLinks = document.querySelectorAll('nav a');
-            navLinks.forEach(link => {
-                const href = new URL(link.getAttribute('href'), window.location.origin);
-                href.searchParams.set('source', 'logeado');
-                link.href = href.toString();
-            });
-
-            // Mostrar el enlace de "Cerrar sesión"
-            document.getElementById('cerrar-sesion').style.display = 'inline';
-
-            
         }
 
         document.getElementById('cerrar-sesion').addEventListener('click', function(event) {
@@ -120,9 +133,11 @@
             // Redirigir a la página de inicio o a la página de login
             window.location.href = './index.html';
         }
-
-      
     </script>
 
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

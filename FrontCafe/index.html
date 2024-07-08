@@ -25,12 +25,11 @@
             <a class="active" href="#home">Inicio</a>
             <a href="./nosotros.html">Nosotros</a>
             <a href="./menu.html">Menu</a>
-            <a hr
-            
-             ef="./servicios.html">Servicios</a>
+            <a href="./servicios.html">Servicios</a>
             <a href="./contacto.html">Contacto</a>   
-            <a href= "./sesion.html">Login</a>
-            <a href= "./registro.html">Registrate</a>
+            <a id="loginLink" href="./sesion.html">Login</a>
+            <a id="registroLink" href="./registro.html">Registrate</a>
+            <a id="cerrar-sesion" href="./logout.html" style="display: none;">Cerrar sesión</a>
         </nav>
     </header>
     <!-- Fin del header -->
@@ -157,5 +156,47 @@
     </footer>
     <!-- Fin del pie de pagina -->
     
+
+    <script>
+        // Obtener el parámetro de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const source = urlParams.get('source');
+
+        // Pasar el parámetro 'source=logeado' a todos los enlaces del nav
+        if (source === 'logeado') {
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                const href = new URL(link.getAttribute('href'), window.location.origin);
+                href.searchParams.set('source', 'logeado');
+                link.href = href.toString();
+            });
+
+            // Ocultar los enlaces de registro y login
+            const registroLink = document.getElementById('registroLink');
+            const loginLink = document.getElementById('loginLink');
+            if (registroLink) registroLink.style.display = 'none';
+            if (loginLink) loginLink.style.display = 'none';
+
+            
+            // Mostrar el enlace de "Cerrar sesión"
+            document.getElementById('cerrar-sesion').style.display = 'inline';
+        }
+       
+        document.getElementById('cerrar-sesion').addEventListener('click', function(event) {
+            event.preventDefault();
+            cerrarSesion();
+        });
+
+        // Función para manejar el cierre de sesión
+        function cerrarSesion() {
+            logeado = false;
+            alert('Sesión cerrada');
+            // Redirigir a la página de inicio o a la página de login
+            window.location.href = './index.html';
+        }
+
+
+    </script>
+
 </body>
 </html>

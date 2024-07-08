@@ -21,20 +21,30 @@
 <body>
     <!-- Comienzo header -->
     <header>
-        <h1 style="margin-top: -40px;">Nosotros</h1>
-        <nav>
-            <a href="./index.html">Inicio</a>
-            <a class="active" href="#nosotros">Nosotros</a>
-            <a href="./menu.html">Menu</a>
-            <a href="./servicios.html">Servicios</a>
-            <a href="./contacto.html">Contacto</a>
-            <a id="cerrar-sesion" href="./logout.html" style="display: none;">Cerrar sesión</a>
-        </nav>
+        <h1 style="margin-top: -40px;">Bienvenido Admin</h1>
+         <nav>
+             <a class="active"  href="./inicioAdmin.html">Inicio</a>
+             <a href="./gestionUsuariosAdmin.html">Usuarios</a>
+             <a href="./gestionUsuariosAdmin.html">Reservas</a>
+             <a href="./gestionPedidosAdmin.html">Pedidos</a>
+             <a id="cerrar-sesion" href="./logout.html" style="display: inline;">Cerrar sesión</a>
+         </nav>
+
     </header>
 
-    <h1 id="bienvenida">¡Hola!</h1>
+            <h1 id="bienvenida">¡Hola!</h1>
 
-
+                <script>
+                    // Obtener el nombre de usuario de la query string
+                    const params = new URLSearchParams(window.location.search);
+                    const nombre = params.get('nombre');
+            
+                    // Mostrar el nombre en la página
+                    if (nombre) {
+                        document.getElementById('bienvenida').textContent = 'Bienvenido, ' + nombre;
+                    }
+                </script>
+ 
 
     <!-- Comienzo del pie de pagina -->
     <footer>
@@ -80,34 +90,8 @@
     <!-- Fin del pie de pagina -->
 
     <script>
-        // Definir la variable booleana logeado
-        let logeado = true;
 
-        // Obtener el nombre de usuario de la query string
-        const params = new URLSearchParams(window.location.search);
-        const nombre = params.get('nombre');
-
-        // Mostrar el nombre en la página si está logeado
-        if (logeado && nombre) {
-            document.getElementById('bienvenida').textContent = 'Bienvenido, ' + nombre;
-        }
-
-        // Añadir el parámetro 'source=logeado' a todos los enlaces del nav si está logeado
-        if (logeado) {
-    
-            const navLinks = document.querySelectorAll('nav a');
-            navLinks.forEach(link => {
-                const href = new URL(link.getAttribute('href'), window.location.origin);
-                href.searchParams.set('source', 'logeado');
-                link.href = href.toString();
-            });
-
-            // Mostrar el enlace de "Cerrar sesión"
-            document.getElementById('cerrar-sesion').style.display = 'inline';
-
-            
-        }
-
+       
         document.getElementById('cerrar-sesion').addEventListener('click', function(event) {
             event.preventDefault();
             cerrarSesion();
@@ -121,8 +105,10 @@
             window.location.href = './index.html';
         }
 
-      
+
     </script>
 
+
+    
 </body>
 </html>
