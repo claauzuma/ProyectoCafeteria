@@ -9,43 +9,48 @@
     <link rel='stylesheet' type='text/css' media='screen' href='../FrontCafe/css/registro.css'>
 </head>
 <body>
-    <a href="/index.html"> <- volver</a>
+    <a href="./index.html" class="back-link styled-link">← Volver</a>
 
     <div id="formularioRegistro">
         <h1>Registro</h1>
         <br>
-        <form action="http://localhost:8080/proyecto.Java_01/registro" method="POST">
-            <span>
-                <label for="registrarEmail">Ingrese su nombre:</label>
+        <form id="registroForm" action="http://localhost:8080/proyecto.Java_01/registro" method="POST">
+            <div class="form-group">
+                <label for="registrarNombre">Ingrese su nombre:</label>
                 <br>
                 <input type="text" name="nombre" id="registrarNombre" required>
                 <div class="error-text" id="nombre-error"></div>
-            </span>
-            <span>
-                <label for="registrarEmail">Ingrese su apellido:</label>
+            </div>
+            <div class="form-group">
+                <label for="registrarApellido">Ingrese su apellido:</label>
                 <br>
                 <input type="text" name="apellido" id="registrarApellido" required>
                 <div class="error-text" id="apellido-error"></div>
-            </span>
-            <span>
+            </div>
+            <div class="form-group">
+                <label for="fechaNacimiento">Ingrese su fecha de nacimiento:</label>
+                <br>
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento" required>
+                <div class="error-text" id="fecha-error"></div>
+            </div>
+            <div class="form-group">
                 <label for="registrarEmail">Ingrese su correo electrónico:</label>
                 <br>
                 <input type="email" name="email" id="registrarEmail" required>
                 <div class="error-text" id="email-error"></div>
-            </span>
-            <span>
+            </div>
+            <div class="form-group">
                 <label for="registrarContraseña">Ingrese su contraseña:</label>
                 <br>
                 <input type="password" name="password" id="registrarContraseña" required>
                 <div class="error-text" id="password-error"></div>
-            </span>
-            <span>
-                <label for="registrarEmail">Ingrese su fecha de nacimiento:</label>
+            </div>
+            <div class="form-group">
+                <label for="confirmarContraseña">Repita la contraseña:</label>
                 <br>
-                <input type="date" name="fechaNacimiento" id="fechaNacimiento" required>
-                <div class="error-text" id="fecha-error"></div>
-            </span>
-
+                <input type="password" name="password" id="confirmarContraseña" required>
+                <div class="error-text" id="password-error"></div>
+            </div>
             <br>
             <input type="submit" id="registrarseBtn" value="Registrarse">
         </form>

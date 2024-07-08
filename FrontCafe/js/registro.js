@@ -1,15 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const registrarNombre = document.getElementById('registrarNombre');
+    const registrarApellido = document.getElementById('registrarApellido');
+    const fechaNacimiento = document.getElementById('fechaNacimiento');
     const registrarEmail = document.getElementById('registrarEmail');
     const registrarContraseña = document.getElementById('registrarContraseña');
     const confirmarContraseña = document.getElementById('confirmarContraseña');
     const registrarseBtn = document.getElementById('registrarseBtn');
+    
+    registrarseBtn.addEventListener('click', (event) => {
+        event.preventDefault();
 
-    registrarseBtn.addEventListener('click', () => {
+        const nombre = registrarNombre.value;
+        const apellido = registrarApellido.value;
         const email = registrarEmail.value;
         const password = registrarContraseña.value;
         const confirmPassword = confirmarContraseña.value;
+        const fecha = fechaNacimiento.value;
 
         let valid = true;
+
+        if (!nombre) {
+            valid = false;
+            document.getElementById('nombre-error').innerText = 'El nombre es obligatorio.';
+        } else {
+            document.getElementById('nombre-error').innerText = '';
+        }
+
+        if (!apellido) {
+            valid = false;
+            document.getElementById('apellido-error').innerText = 'El apellido es obligatorio.';
+        } else {
+            document.getElementById('apellido-error').innerText = '';
+        }
+
+        if (!fecha) {
+            valid = false;
+            document.getElementById('fecha-error').innerText = 'La fecha de nacimiento es obligatoria.';
+        } else {
+            document.getElementById('fecha-error').innerText = '';
+        }
 
         if (!email) {
             valid = false;
@@ -45,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.success) {
                     alert('Registro exitoso');
                     // Redirigir al usuario a la página de inicio de sesión u otra página
-                    window.location.href = 'sesion.html';
+                    window.location.href = '/sesion.html';
                 } else {
                     alert('Error en el registro: ' + data.message);
                 }

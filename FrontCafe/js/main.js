@@ -14,22 +14,50 @@ const mostrarError = (input, mensaje) => {
 const enviarBtn = document.getElementById("enviarBtn");
 const registrarseBtn = document.getElementById("registrarseBtn");
 
-enviarBtn.addEventListener("click", () => {
-    const emailInput = document.getElementById("registrarEmail");
-    const passwordInput = document.getElementById("registrarContraseña");
+const emailInput = document.getElementById("registrarEmail");
+const passwordInput = document.getElementById("registrarContraseña");
+
+emailInput.addEventListener("input", () => {
+    if (validarCorreoElectronico(emailInput.value)) {
+        mostrarError(emailInput, "");
+    }
+});
+
+passwordInput.addEventListener("input", () => {
+    if (passwordInput.value != "") {
+        mostrarError(passwordInput, "");
+    }
+});
+
+enviarBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    let isValid = true;
     
     if (emailInput.value === "") {
         mostrarError(emailInput, "Campo obligatorio");
+        isValid = false;
     } else if (!validarCorreoElectronico(emailInput.value)) {
-        mostrarError(emailInput, "Ingrese un mail valido")
+        mostrarError(emailInput, "Ingrese un mail valido");
+        isValid = false;
     } else {
         mostrarError(emailInput, "");
     }
     
     if (passwordInput.value === "") {
         mostrarError(passwordInput, "Campo obligatorio");
+        isValid = false;
     } else {
         mostrarError(passwordInput, "");
     }
+
+    if (isValid) {
+        //Enviar form al back
+    }
+
+});
+
+registrarseBtn.addEventListener("click", () => {
+    window.location.href = "./registro.html";
 });
 
